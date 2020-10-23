@@ -10,8 +10,9 @@
 
 def longestAlpha(string):
     result = ""
-    max =""
-    for i in range(len(string) -1):
+    maxx = ""
+    length = len(string)
+    for i in range(length -1):
 
         # check consecutive element if they are in order or not
         if(string[i] <= string[i+1] ):
@@ -25,11 +26,11 @@ def longestAlpha(string):
         else:
             result  = result + string[i]        
             # if length of result(prev stored seq) is greater than max seq(initially empty) then make max equals result
-            if(len(result) > len(max)):
-                max = result
+            if(len(result) > len(maxx)):
+                maxx = result
             result = ""        
 
-    if(len(string) == 1):
+    if(length == 1):
         result = string
     return result
 
